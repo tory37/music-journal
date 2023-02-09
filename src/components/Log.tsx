@@ -1,10 +1,35 @@
 import React from 'react'
-import Paper from "@mui/material/Paper";
+import Card from "@mui/material/Card";
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import LogModel from '../models/Log';
+import { Grid } from '@mui/material';
 
-export default function Log() {
+interface Props {
+  log: LogModel
+}
+
+export default function Log(props: Props) {
   return (
-   <Paper>
-    Test!
-   </Paper>
+    <Card
+      sx={{
+        width: '100%'
+      }}
+    >
+      <CardContent>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography variant='h5' gutterBottom>
+              {props.log.title}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant='body1' gutterBottom>
+              {props.log.type}
+            </Typography>
+          </Grid>
+        </Grid>
+      </CardContent>
+    </Card>
   )
 }

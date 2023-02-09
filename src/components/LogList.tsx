@@ -1,13 +1,21 @@
 import React from 'react';
-import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import LogModel from '../models/Log';
+import Log from './Log';
 
 interface Props {
     logsPerPage: Number,
-    
+    logs: LogModel[]
 }
 
-export default function LogList() {
+export default function LogList(props: Props) {
   return (
-    <div>LogList</div>
+    <Grid container spacing={2}>
+      {props.logs.map((log) => (
+        <Grid item xs={12}>
+          <Log log={log} />
+        </Grid>
+      ))}
+    </Grid>
   )
 }

@@ -1,5 +1,6 @@
 import React, {ReactElement, FC} from "react";
-import {Box, Typography} from "@mui/material";
+import {Box, Container, Typography} from "@mui/material";
+import LogList from "../components/LogList";
 
 const Home: FC<any> = (): ReactElement => {
     return (
@@ -7,10 +8,29 @@ const Home: FC<any> = (): ReactElement => {
             flexGrow: 1,
             backgroundColor: 'whitesmoke',
             display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            pt: 2
         }}>
-            <Typography variant="h3">Home</Typography>
+            <Container>
+                <LogList 
+                    logsPerPage={5} 
+                    logs={[
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Endurance 1'
+                        },
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Taps 1'
+                        },
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Slides 1'
+                        },
+                    ]}
+                />
+            </Container>
         </Box>
     );
 };
