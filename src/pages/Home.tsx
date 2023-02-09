@@ -28,6 +28,30 @@ const Home: FC<any> = (): ReactElement => {
                             type: 'WORKOUT',
                             title: 'Riffhard: Slides 1'
                         },
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Endurance 1'
+                        },
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Taps 1'
+                        },
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Slides 1'
+                        },
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Endurance 1'
+                        },
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Taps 1'
+                        },
+                        {
+                            type: 'WORKOUT',
+                            title: 'Riffhard: Slides 1'
+                        },
                     ]}
                 />
             </Container>
