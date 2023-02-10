@@ -9,12 +9,13 @@ const Home: FC<any> = (): ReactElement => {
     return (
         <Box sx={{
             flexGrow: 1,
-            backgroundColor: 'whitesmoke',
+            backgroundColor: 'lightslategray',
             display: 'flex',
             justifyContent: 'flex-start',
             alignItems: 'flex-start',
             pt: 2,
-            height: '100%'
+            height: '100%',
+            overflow: 'scroll'
         }}>
             <Container>
                 <LogList 

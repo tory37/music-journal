@@ -60,7 +60,10 @@ export default function AppWrapper(props: React.PropsWithChildren<Props>) {
   };
 
   const drawer = (
-    <div>
+    <Box sx={{
+      backgroundColor: "whitesmoke",
+      height: '100%'
+    }}>
       <Toolbar />
       <Divider />
       <List>
@@ -76,7 +79,7 @@ export default function AppWrapper(props: React.PropsWithChildren<Props>) {
         ))}
       </List>
       <Divider />
-    </div>
+    </Box>
   );
 
   const container = window !== undefined ? () => window.document.body : undefined;
@@ -94,6 +97,8 @@ export default function AppWrapper(props: React.PropsWithChildren<Props>) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          backgroundColor: "darkslategray",
+          color: "white"
         }}
       >
         <Toolbar>
