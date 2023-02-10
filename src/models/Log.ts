@@ -1,4 +1,10 @@
+import LogRecord from './LogRecord';
+
 export default interface Log {
-    type: String,
+    id: string,
     title: string,
+    link: string,
+    targetBpm: number,
+    tags: string[],
+    records: LogRecord[]
 }

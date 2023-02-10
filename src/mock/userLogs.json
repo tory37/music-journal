@@ -1,0 +1,42 @@
+[
+    {
+        "id": "252f8b6f-064f-4874-9f62-7e7457d23d8a",
+        "title": "Riffhard: Endurance 1",
+        "link": "www.what.com",
+        "targetBpm": 150,
+        "tags": [
+            "6d059937-0ba7-40ec-b84c-e1e26d457867",
+            "01fdb9ff-e97e-46b1-9c51-2a31c90b8b4f7"
+        ],
+        "records": [
+            {
+                "dateLogged": "1675983839862",
+                "bpmAchieved": 130,
+                "notes": "Well this was a fun one.  Did some stuff.\n and what not i guess.  1234 ha!"
+            },
+            {
+                "dateLogged": "1675919687",
+                "bpmAchieved": 125,
+                "notes": "Today suuuuuuucked"
+            }
+        ]
+    },
+    {
+        "id": "59c7424e-e164-431d-819c-5b8dc9be2146",
+        "title": "Riffhard: Taps 1",
+        "link": "www.what.com",
+        "targetBpm": 150,
+        "tags": [],
+        "records": []
+    },
+    {
+        "id": "c58607bd-938d-4f98-a573-2d5837ec2af8",
+        "title": "Riffhard: Slides 1",
+        "link": "www.what.com",
+        "targetBpm": 150,
+        "tags": [
+            "f5fb1dd1-df70-4c10-8415-4dc1533e8c2d"
+        ],
+        "records": []
+    }
+]

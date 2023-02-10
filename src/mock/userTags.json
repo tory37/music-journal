@@ -1,0 +1,20 @@
+[
+    {
+        "id": "6d059937-0ba7-40ec-b84c-e1e26d457867",
+        "title": "Riffhard",
+        "color": "#f00707",
+        "textColor": "#ffffff"
+    },
+    {
+        "id": "01fdb9ff-e97e-46b1-9c51-2a31c90b8b4f7",
+        "title": "Downpicking",
+        "color": "#580096",
+        "textColor": "#ffffff"
+    },
+    {
+        "id": "f5fb1dd1-df70-4c10-8415-4dc1533e8c2d",
+        "title": "Slides",
+        "color": "#0d9600",
+        "textColor": "#ffffff"
+    }
+]

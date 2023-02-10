@@ -2,6 +2,9 @@ import React, {ReactElement, FC} from "react";
 import {Box, Container, Typography} from "@mui/material";
 import LogList from "../components/LogList";
 
+import mockUserLogs from '../mock/userLogs.json';
+import mockUserTags from '../mock/userTags.json';
+
 const Home: FC<any> = (): ReactElement => {
     return (
         <Box sx={{
@@ -10,49 +13,14 @@ const Home: FC<any> = (): ReactElement => {
             display: 'flex',
             justifyContent: 'flex-start',
             alignItems: 'flex-start',
-            pt: 2
+            pt: 2,
+            height: '100%'
         }}>
             <Container>
                 <LogList 
                     logsPerPage={5} 
-                    logs={[
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Endurance 1'
-                        },
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Taps 1'
-                        },
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Slides 1'
-                        },
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Endurance 1'
-                        },
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Taps 1'
-                        },
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Slides 1'
-                        },
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Endurance 1'
-                        },
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Taps 1'
-                        },
-                        {
-                            type: 'WORKOUT',
-                            title: 'Riffhard: Slides 1'
-                        },
-                    ]}
+                    logs={mockUserLogs}
+                    allTags={mockUserTags}
                 />
             </Container>
         </Box>
