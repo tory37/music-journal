@@ -7,6 +7,7 @@ import { Button, Chip, Divider, Grid, Pagination, Paper } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 // Components
 import LogRecord from './LogRecord';
+import LogRecordForm from './LogRecordForm';
 // Models
 import LogModel from '../models/Log';
 import TagModel from '../models/Tag';
@@ -23,6 +24,14 @@ export default function LogPreview(props: Props) {
 
   const handleRecordPageChange = (e: React.ChangeEvent<unknown>, p: number) => {
     setRecordIndex(p - 1);
+  }
+
+  const handleClickNewRecord = () => {
+    setIsCreating(true);
+  }
+
+  const handleClickSaveRecord = () => {
+    setIsCreating(false);
   }
   
   return (
@@ -50,44 +59,54 @@ export default function LogPreview(props: Props) {
               </Grid>
             ))}
           </Grid>
-          {props.log.records && props.log.records.length > 0 && (
-            <Grid item container spacing={2} direction="row" xs={12}>
-                <Grid item xs={12} key={props.log.records[recordIndex].dateLogged}>
-                  <LogRecord record={props.log.records[recordIndex]} />
+          {/* Records */}
+          {!isCreating && (
+            <>
+              {props.log.records && props.log.records.length > 0 && (
+                <Grid item container spacing={2} direction="row" xs={12}>
+                    <Grid item xs={12} key={props.log.records[recordIndex].dateLogged}>
+                      <LogRecord record={props.log.records[recordIndex]} />
+                    </Grid>
                 </Grid>
+              )}
+              <Grid 
+                container 
+                item 
+                xs={12} 
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                {props.log.records && props.log.records.length > 0 && (
+                  <Grid item xs={6}>
+                    <Pagination 
+                      count={props.log.records.length} 
+                      onChange={handleRecordPageChange}
+                    />
+                  </Grid>
+                )}
+                {!props.log.records || props.log.records.length === 0 && (
+                  <Grid item xs={6}>
+                    <Typography variant="subtitle1">
+                      No Records Yet
+                    </Typography>
+                  </Grid>
+                )}
+                <Grid item>
+                  <Button variant="outlined" onClick={handleClickNewRecord}>
+                    <AddIcon sx={{
+                      mr: 1
+                    }} />
+                    New Record
+                  </Button>
+                </Grid>
+              </Grid>
+            </>
+          )}
+          {isCreating && (
+            <Grid item xs={12}>
+              <LogRecordForm />
             </Grid>
           )}
-          <Grid 
-            container 
-            item 
-            xs={12} 
-            justifyContent="space-between"
-            alignItems="center"
-          >
-            {props.log.records && props.log.records.length > 0 && (
-              <Grid item xs={6}>
-                <Pagination 
-                  count={props.log.records.length} 
-                  onChange={handleRecordPageChange}
-                />
-              </Grid>
-            )}
-            {!props.log.records || props.log.records.length === 0 && (
-              <Grid item xs={6}>
-                <Typography variant="subtitle1">
-                  No Records Yet
-                </Typography>
-              </Grid>
-            )}
-            <Grid item>
-              <Button variant="outlined">
-                <AddIcon sx={{
-                  mr: 1
-                }} />
-                New Record
-              </Button>
-            </Grid>
-          </Grid>
         </Grid>
       </CardContent>
     </Card>

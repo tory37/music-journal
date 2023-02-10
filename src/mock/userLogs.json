@@ -27,7 +27,13 @@
         "link": "www.what.com",
         "targetBpm": 150,
         "tags": [],
-        "records": []
+        "records": [
+            {
+                "dateLogged": "1675919687",
+                "bpmAchieved": 125,
+                "notes": "Today suuuuuuucked"
+            }
+        ]
     },
     {
         "id": "c58607bd-938d-4f98-a573-2d5837ec2af8",
